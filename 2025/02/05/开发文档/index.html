@@ -1,0 +1,677 @@
+
+<!DOCTYPE html><html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  
+  <title>开发文档 - 小戴的博客</title>
+
+  
+    <meta name="description" content="开发文档Linux命令chmod 加所有权限 1chmod -R 777 文件名  .开头的文件是隐藏文件查看语言环境，修改语言环境为中文 12echo $LANGexport LANG&#x3D;zh_CN.UTF-8  mkdir 递归创建文件夹 1mkdir -p  文件夹  touch 创建空文件 1touch 文件名  tree 查看文件夹的树形结构 1tree  文件夹  在文件中搜寻字符串 1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发文档">
+<meta property="og:url" content="http://example.com/2025/02/05/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/index.html">
+<meta property="og:site_name" content="小戴的博客">
+<meta property="og:description" content="开发文档Linux命令chmod 加所有权限 1chmod -R 777 文件名  .开头的文件是隐藏文件查看语言环境，修改语言环境为中文 12echo $LANGexport LANG&#x3D;zh_CN.UTF-8  mkdir 递归创建文件夹 1mkdir -p  文件夹  touch 创建空文件 1touch 文件名  tree 查看文件夹的树形结构 1tree  文件夹  在文件中搜寻字符串 1">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-02-05T10:23:04.659Z">
+<meta property="article:modified_time" content="2025-02-06T01:24:50.609Z">
+<meta property="article:author" content="xiaodai">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.29.1">
+
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">小戴的博客</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="Search"></form><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><a class="item title" href="/2025/02/05/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/"><span class="title">开发文档</span></a><a class="item title" href="/2025/02/05/hello-world/"><span class="title">Hello World</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2025-02-05T10:23:04.659Z">2025-02-05</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2025-02-06T01:24:50.609Z">2025-02-06</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>开发文档</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h1 id="开发文档"><a href="#开发文档" class="headerlink" title="开发文档"></a>开发文档</h1><h2 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h2><h3 id="chmod-加所有权限"><a href="#chmod-加所有权限" class="headerlink" title="chmod 加所有权限"></a>chmod 加所有权限</h3><blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> -R 777 文件名</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="开头的文件是隐藏文件"><a href="#开头的文件是隐藏文件" class="headerlink" title=".开头的文件是隐藏文件"></a>.开头的文件是隐藏文件</h3><h3 id="查看语言环境，修改语言环境为中文"><a href="#查看语言环境，修改语言环境为中文" class="headerlink" title="查看语言环境，修改语言环境为中文"></a>查看语言环境，修改语言环境为中文</h3><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo $LANG</span><br><span class="line">export LANG=zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="mkdir-递归创建文件夹"><a href="#mkdir-递归创建文件夹" class="headerlink" title="mkdir 递归创建文件夹"></a>mkdir 递归创建文件夹</h3><blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p  文件夹</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="touch-创建空文件"><a href="#touch-创建空文件" class="headerlink" title="touch 创建空文件"></a>touch 创建空文件</h3><blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch 文件名</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="tree-查看文件夹的树形结构"><a href="#tree-查看文件夹的树形结构" class="headerlink" title="tree 查看文件夹的树形结构"></a>tree 查看文件夹的树形结构</h3><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tree  文件夹</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="在文件中搜寻字符串"><a href="#在文件中搜寻字符串" class="headerlink" title="在文件中搜寻字符串"></a>在文件中搜寻字符串</h3><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grep &quot;2024&quot; *.log</span><br><span class="line"></span><br><span class="line">grep -l &quot;2024&quot; *.log 只显示文件名 不显示所有符合条件的位置 一个文件夹可能会存在多个位置符合条件</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h3 id="解决npm-install安装出现packages-are-looking-for-funding-run-npm-fund-for-details问题"><a href="#解决npm-install安装出现packages-are-looking-for-funding-run-npm-fund-for-details问题" class="headerlink" title="解决npm install安装出现packages are looking for funding run npm fund for details问题"></a>解决npm install安装出现packages are looking for funding run <code>npm fund</code> for details问题</h3><blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> fund <span class="literal">false</span> --location=global</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="解决：git-SSL-certificate-problem-unable-to-get-local-issuer-certificate"><a href="#解决：git-SSL-certificate-problem-unable-to-get-local-issuer-certificate" class="headerlink" title="解决：git SSL certificate problem: unable to get local issuer certificate"></a>解决：git SSL certificate problem: unable to get local issuer certificate</h3><blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslbackend schannel</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="解决-坑：ssh-connect-to-host-github-com-port-22-Connection-refused"><a href="#解决-坑：ssh-connect-to-host-github-com-port-22-Connection-refused" class="headerlink" title="解决 坑：ssh: connect to host github.com port 22: Connection refused"></a>解决 坑：ssh: connect to host github.com port 22: Connection refused</h3><blockquote>
+<h2 id="排查思路"><a href="#排查思路" class="headerlink" title="排查思路"></a><strong>排查思路</strong></h2><p><code>ssh: connect to host github.com port 22: Connection refused</code>这个错误提示的是连接<code>github.com</code>的<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=203985854&content_type=Article&match_order=1&q=22%E7%AB%AF%E5%8F%A3&zhida_source=entity">22端口</a>被拒绝了。</p>
+<p>原本以为<a href="https://link.zhihu.com/?target=http://github.com">http://github.com</a>挂了，但是浏览器访问<a href="https://link.zhihu.com/?target=http://github.com">http://github.com</a>一切正常。</p>
+<p>网上搜索这个报错，发现很多人遇到这个问题，大概有2个原因和对应解决方案：</p>
+<h3 id="使用GitHub的443端口"><a href="#使用GitHub的443端口" class="headerlink" title="使用GitHub的443端口"></a><strong>使用GitHub的<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=203985854&content_type=Article&match_order=1&q=443%E7%AB%AF%E5%8F%A3&zhida_source=entity">443端口</a></strong></h3><p>22端口可能被防火墙屏蔽了，可以尝试连接GitHub的443端口。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.ssh/config</span><br><span class="line">```</span><br><span class="line"><span class="comment"># Add section below to it</span></span><br><span class="line">Host github.com</span><br><span class="line">  Hostname ssh.github.com</span><br><span class="line">  Port 443</span><br><span class="line">```</span><br><span class="line">$ ssh -T git@github.com</span><br><span class="line">Hi xxxxx! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not</span></span><br><span class="line"><span class="string">provide shell access.</span></span><br></pre></td></tr></table></figure>
+
+<p>这个解决方案的思路是：给<code>~/.ssh/config</code>文件里添加如下内容，这样ssh连接GitHub的时候就会使用443端口。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  Hostname ssh.github.com</span><br><span class="line">  Port 443</span><br></pre></td></tr></table></figure>
+
+<p>如果<code>~/.ssh</code>目录下没有config文件，新建一个即可。</p>
+<p>修改完<code>~/.ssh/config</code>文件后，使用<code>ssh -T git@github.com</code>来测试和GitHub的网络通信是否正常，如果提示<code>Hi xxxxx! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code> 就表示一切正常了。</p>
+<p>但是，这个方案在我这里行不通，修改后还是提示<code>ssh: connect to host github.com port 443: Connection refused</code>。</p>
+<p><strong>这个方案有效的前提是</strong>：执行命令<code>ssh -T -p 443 git@ssh.github.com</code>后不再提示<code>connection refused</code>，所以要尝试这个方案的小伙伴先执行这条命令测试下。</p>
+<h3 id="使用https协议，不要使用ssh协议"><a href="#使用https协议，不要使用ssh协议" class="headerlink" title="使用https协议，不要使用ssh协议"></a><strong>使用https协议，不要使用<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=203985854&content_type=Article&match_order=1&q=ssh%E5%8D%8F%E8%AE%AE&zhida_source=entity">ssh协议</a></strong></h3><p>在你的GitHub的本地repo目录，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="built_in">local</span> -e</span><br></pre></td></tr></table></figure>
+
+<p>然后把里面的url配置项从git格式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url = git@github.com:username/repo.git</span><br></pre></td></tr></table></figure>
+
+<p>修改为https格式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url = https://github.com/username/repo.git</span><br></pre></td></tr></table></figure>
+
+<p>这个其实修改的是repo<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=203985854&content_type=Article&match_order=1&q=%E6%A0%B9%E7%9B%AE%E5%BD%95&zhida_source=entity">根目录</a>下的<code>./git/config</code>文件。</p>
+<p><strong>但是这个方法在我这里同样不生效</strong>。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a><strong>解决方案</strong></h2><p>网上的招都没用，只能自力更生了。既然和GitHub建立ssh连接的时候提示<code>connection refused</code>，那我们就详细看看建立ssh连接的过程中发生了什么，可以使用<code>ssh -v</code>命令，<code>-v</code>表示verbose，会打出详细日志。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -vT git@github.com</span><br><span class="line">OpenSSH_9.0p1, OpenSSL 1.1.1o  3 May 2022</span><br><span class="line">debug1: Reading configuration data /etc/ssh/ssh_config</span><br><span class="line">debug1: Connecting to github.com [::1] port 22.</span><br><span class="line">debug1: connect to address ::1 port 22: Connection refused</span><br><span class="line">debug1: Connecting to github.com [127.0.0.1] port 22.</span><br><span class="line">debug1: connect to address 127.0.0.1 port 22: Connection refused</span><br><span class="line">ssh: connect to host github.com port 22: Connection refused</span><br></pre></td></tr></table></figure>
+
+<p>从上面的信息马上就发现了诡异的地方，连接<a href="https://link.zhihu.com/?target=http://github.com">http://github.com</a>的地址居然是<code>::1</code>和<code>127.0.0.1</code>。前者是IPV6的localhost地址，后者是IPV4的localhost地址。</p>
+<p>到这里问题就很明确了，是DNS解析出问题了，导致<a href="https://link.zhihu.com/?target=http://github.com">http://github.com</a>域名被解析成了localhost的ip地址，就自然连不上GitHub了。</p>
+<p>Windows下执行<code>ipconfig /flushdns</code> 清楚DNS缓存后也没用，最后修改hosts文件，增加一条github.com的<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=203985854&content_type=Article&match_order=1&q=%E5%9F%9F%E5%90%8D%E6%98%A0%E5%B0%84&zhida_source=entity">域名映射</a>搞定。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">140.82.113.4 github.com</span><br></pre></td></tr></table></figure>
+
+<p>查找<a href="https://link.zhihu.com/?target=http://github.com">http://github.com</a>的ip地址可以使用<a href="https://link.zhihu.com/?target=https://dnschecker.org/">https://dnschecker.org/</a>来查询github.com在全球的ip地址，也可以通过</p>
+<p><a href="https://link.zhihu.com/?target=https://api.github.com/meta">https://api.github.com/meta</a> 查看github.com官方公布的IP地址</p>
+<p>这个问题其实就是DNS解析被污染了，有2种可能：</p>
+<ul>
+<li>DNS解析被运营商劫持了</li>
+<li>使用了科学上网工具</li>
+</ul>
+<p>按照我上面写的解决方案操作即可解决。</p>
+<h2 id="最后大招"><a href="#最后大招" class="headerlink" title="最后大招"></a><strong>最后大招</strong></h2><p>如果你发现DNS解析并没有解析到127.0.0.1，但是执行ssh -vT <a href="mailto:git@github.com">git@github.com</a>就是显示当前github.com解析的ip连接22端口和443端口失败，那就直接去<a href="https://link.zhihu.com/?target=https://dnschecker.org/">https://dnschecker.org/</a>或者<a href="https://link.zhihu.com/?target=https://api.github.com/meta">https://api.github.com/meta</a>找另外的可用ip。</p>
+<p>然后修改自己电脑上的DNS解析host文件，把<a href="https://link.zhihu.com/?target=http://github.com">http://github.com</a>解析到新的ip，然后再测试。</p>
+</blockquote>
+<h2 id="注册github账号失败提示-Unable-to-verify-your-captcha-response-Please-visit-https-help-github-com-articles-troubleshooting-connectivity-problems-troubleshooting-the-captcha-for-troubleshooting-information"><a href="#注册github账号失败提示-Unable-to-verify-your-captcha-response-Please-visit-https-help-github-com-articles-troubleshooting-connectivity-problems-troubleshooting-the-captcha-for-troubleshooting-information" class="headerlink" title="注册github账号失败提示 Unable to verify your captcha response. Please visit https://help.github.com/articles/troubleshooting-connectivity-problems/#troubleshooting-the-captcha for troubleshooting information."></a>注册github账号失败提示 Unable to verify your captcha response. Please visit <a href="https://link.zhihu.com/?target=https://help.github.com/articles/troubleshooting-connectivity-problems/%23troubleshooting-the-captcha">https://help.github.com/articles/troubleshooting-connectivity-problems/#troubleshooting-the-captcha</a> for troubleshooting information.</h2><blockquote>
+<p>用<a href="https://link.zhihu.com/?target=http://ipaddress.com">http://ipaddress.com</a>查 <a href="https://link.zhihu.com/?target=http://octocaptcha.com">http://octocaptcha.com</a>的地址，在hosts里面补上后又操作了一遍flushdns    </p>
+<p> 140.82.112.4 octocaptcha.com<br>再访问 <a target="_blank" rel="noopener" href="https://octocaptcha.com/">OctoCaptcha</a>  <a target="_blank" rel="noopener" href="https://octocaptcha.com/">https://octocaptcha.com/</a>   回头到注册页面重新执行注册动作就会出现验证码</p>
+</blockquote>
+<h2 id="解决hexo-d-ssh-22端口超时方法"><a href="#解决hexo-d-ssh-22端口超时方法" class="headerlink" title="解决hexo  d &#x2F; ssh 22端口超时方法"></a>解决hexo  d &#x2F; ssh 22端口超时方法</h2><blockquote>
+<p>连接超时，首先找到git的安装目录，找到&#x2F;etc&#x2F;ssh&#x2F;ssh_config文件,使用记事本打开它。</p>
+<p>把如下内容复制到ssh_config文件的末尾处：并记得保存。 重新尝试 hexo d或者 ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#103;&#x69;&#x74;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p>参考链接<a target="_blank" rel="noopener" href="https://nate-lin.github.io/2020/12/19/jie-jue-git-lian-jie-github-chao-shi-wen-ti-connection-timed-out/">解决-git连接github超时问题Connection timed out | 浅悦的编程时光</a></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User git</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="hexo-部署后页面显示的内容为main分支而不是master-解决"><a href="#hexo-部署后页面显示的内容为main分支而不是master-解决" class="headerlink" title="hexo 部署后页面显示的内容为main分支而不是master 解决"></a>hexo 部署后页面显示的内容为main分支而不是master 解决</h2><blockquote>
+<ul>
+<li>选择博客所对应的仓库 ，然后选择上面一排选项卡中settings</li>
+<li>然后把右边General选项卡中Default Branch 和Page选项卡中Build and deployment 下的branch都改成 master即可</li>
+<li>受网络影响可能前面几次刷新看到的效果没有变化 可以多刷新几次试试</li>
+</ul>
+</blockquote>
+<h2 id="笔记源码管理建议"><a href="#笔记源码管理建议" class="headerlink" title="笔记源码管理建议"></a>笔记源码管理建议</h2><h3 id="使用-GitHub-仓库"><a href="#使用-GitHub-仓库" class="headerlink" title="使用 GitHub 仓库"></a>使用 GitHub 仓库</h3><p>在前面的步骤中，我们还没有把源码放进仓库中保存，这样会很容易丢失。所以接下来我们再创建一个仓库，例如可以命名为 <code>myblog-source</code> 用来表示这个仓库存放的是源码，这个仓库建议选择为「Private」即私有仓库。</p>
+<p>首先把这个仓库克隆到本地：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/username/myblog-source</span><br></pre></td></tr></table></figure>
+
+<p>然后在此仓库中配置一下忽略文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">node_modules</span><br><span class="line">db.json</span><br><span class="line">.deploy_git</span><br><span class="line">public</span><br></pre></td></tr></table></figure>
+
+<p>这些文件可以根据我们的源码生成，所以建议忽略它们，不让版本库追踪这些文件的变化。然后把我们的博客工程目录整个复制进来，或者在这里面重新创建一个，最终 <code>myblog-source</code> 仓库目录结构会是这样的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">myblog-source:</span><br><span class="line">  - scaffolds: # 模版</span><br><span class="line">    - draft.md</span><br><span class="line">    - page.md</span><br><span class="line">    - post.md</span><br><span class="line">  - source:</span><br><span class="line">    _posts: # 这里面存放文章</span><br><span class="line">      - xxx.md</span><br><span class="line">  - themes:</span><br><span class="line">    ...</span><br><span class="line">  - _config.yml # 配置文件</span><br><span class="line">  - package.json</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+
+<p>然后把这些文件提交并推送到 GitHub 上就可以啦：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br><span class="line">git commit -m &quot;update&quot;</span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure>
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>License</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">Older</div><a href="/2025/02/05/hello-world/">Hello World</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">xiaodai</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar 1.29.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">On This Page</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3"><span class="toc-text">开发文档</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E5%91%BD%E4%BB%A4"><span class="toc-text">Linux命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#chmod-%E5%8A%A0%E6%89%80%E6%9C%89%E6%9D%83%E9%99%90"><span class="toc-text">chmod 加所有权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A4%B4%E7%9A%84%E6%96%87%E4%BB%B6%E6%98%AF%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6"><span class="toc-text">.开头的文件是隐藏文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%EF%BC%8C%E4%BF%AE%E6%94%B9%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E4%B8%BA%E4%B8%AD%E6%96%87"><span class="toc-text">查看语言环境，修改语言环境为中文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mkdir-%E9%80%92%E5%BD%92%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">mkdir 递归创建文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#touch-%E5%88%9B%E5%BB%BA%E7%A9%BA%E6%96%87%E4%BB%B6"><span class="toc-text">touch 创建空文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tree-%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E6%A0%91%E5%BD%A2%E7%BB%93%E6%9E%84"><span class="toc-text">tree 查看文件夹的树形结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E6%96%87%E4%BB%B6%E4%B8%AD%E6%90%9C%E5%AF%BB%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">在文件中搜寻字符串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git"><span class="toc-text">git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3npm-install%E5%AE%89%E8%A3%85%E5%87%BA%E7%8E%B0packages-are-looking-for-funding-run-npm-fund-for-details%E9%97%AE%E9%A2%98"><span class="toc-text">解决npm install安装出现packages are looking for funding run npm fund for details问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%EF%BC%9Agit-SSL-certificate-problem-unable-to-get-local-issuer-certificate"><span class="toc-text">解决：git SSL certificate problem: unable to get local issuer certificate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3-%E5%9D%91%EF%BC%9Assh-connect-to-host-github-com-port-22-Connection-refused"><span class="toc-text">解决 坑：ssh: connect to host github.com port 22: Connection refused</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E6%9F%A5%E6%80%9D%E8%B7%AF"><span class="toc-text">排查思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8GitHub%E7%9A%84443%E7%AB%AF%E5%8F%A3"><span class="toc-text">使用GitHub的443端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8https%E5%8D%8F%E8%AE%AE%EF%BC%8C%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8ssh%E5%8D%8F%E8%AE%AE"><span class="toc-text">使用https协议，不要使用ssh协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E5%A4%A7%E6%8B%9B"><span class="toc-text">最后大招</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8Cgithub%E8%B4%A6%E5%8F%B7%E5%A4%B1%E8%B4%A5%E6%8F%90%E7%A4%BA-Unable-to-verify-your-captcha-response-Please-visit-https-help-github-com-articles-troubleshooting-connectivity-problems-troubleshooting-the-captcha-for-troubleshooting-information"><span class="toc-text">注册github账号失败提示 Unable to verify your captcha response. Please visit https:&#x2F;&#x2F;help.github.com&#x2F;articles&#x2F;troubleshooting-connectivity-problems&#x2F;#troubleshooting-the-captcha for troubleshooting information.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3hexo-d-ssh-22%E7%AB%AF%E5%8F%A3%E8%B6%85%E6%97%B6%E6%96%B9%E6%B3%95"><span class="toc-text">解决hexo  d &#x2F; ssh 22端口超时方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-%E9%83%A8%E7%BD%B2%E5%90%8E%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E7%9A%84%E5%86%85%E5%AE%B9%E4%B8%BAmain%E5%88%86%E6%94%AF%E8%80%8C%E4%B8%8D%E6%98%AFmaster-%E8%A7%A3%E5%86%B3"><span class="toc-text">hexo 部署后页面显示的内容为main分支而不是master 解决</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%94%E8%AE%B0%E6%BA%90%E7%A0%81%E7%AE%A1%E7%90%86%E5%BB%BA%E8%AE%AE"><span class="toc-text">笔记源码管理建议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-GitHub-%E4%BB%93%E5%BA%93"><span class="toc-text">使用 GitHub 仓库</span></a></li></ol></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>Scroll to Top</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `Just`,
+      min: `minutes ago`,
+      hour: `hours ago`,
+      day: `days ago`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `Switched to Light Mode`,
+      dark: `Switched to Dark Mode`,
+      auto: `Switched to Auto Mode`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
