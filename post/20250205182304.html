@@ -169,7 +169,7 @@
 </blockquote>
 <h2 id="解决hexo-d-ssh-22端口超时方法"><a href="#解决hexo-d-ssh-22端口超时方法" class="headerlink" title="解决hexo  d &#x2F; ssh 22端口超时方法"></a>解决hexo  d &#x2F; ssh 22端口超时方法</h2><blockquote>
 <p>连接超时，首先找到git的安装目录，找到&#x2F;etc&#x2F;ssh&#x2F;ssh_config文件,使用记事本打开它。</p>
-<p>把如下内容复制到ssh_config文件的末尾处：并记得保存。 重新尝试 hexo d或者 ssh -T <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#105;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#116;&#64;&#x67;&#105;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;</a></p>
+<p>把如下内容复制到ssh_config文件的末尾处：并记得保存。 重新尝试 hexo d或者 ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 <p>参考链接<a target="_blank" rel="noopener" href="https://nate-lin.github.io/2020/12/19/jie-jue-git-lian-jie-github-chao-shi-wen-ti-connection-timed-out/">解决-git连接github超时问题Connection timed out | 浅悦的编程时光</a></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User git</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure>
 </blockquote>
